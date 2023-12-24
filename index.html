@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=-1.0">
+    <title>Taxpal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/taxpallogo.svg" class="w-96 h-8">
+
+    <style>
+        .maximize-animation {
+          transition: transform 0.3s ease-in-out;
+        }
+    
+        .maximize-animation:hover {
+          transform: scale(1.1);
+        } 
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInDown {
+            animation: fadeInDown 1s ease-out;
+        }
+      </style>
+</head>
+
+<body class="bg-gradient-to-r from-rose-100 to-teal-100 animate-fadeInDown">
+    
+    <nav class="fixed top-0 z-50 mobile:flex justify-between tablet:flex desktop:flex h-11 bg-gray-700 bg-opacity-20 border border-opacity-30 border-gray-300 w-full backdrop-blur-sm bg-blur shadow-lg ">
+        <div class="w-12 w-20 relative left-5 top-2">
+            <img src="images/taxpallogo.svg" alt="logo">
+        </div>
+        <ul class="flex gap-7 items-center relative top-0 left-14 text-white">
+            <li class="mobile:hidden tablet:hidden hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center"><a href="#features">Features</a></li>
+            <li class="mobile:hidden tablet:hidden hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center"><a href="#testimonials">Testimonials</a></li>
+            <li class="mobile:hidden tablet:hidden hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center"><a href="#pricing">Pricing</a></li>
+        </ul>
+        <div class="flex desktop:relative bottom-3">
+            <button class="relative top-4 right-24 mobile:hidden tablet:hidden hover:bg-zinc-400/25 rounded-lg text-center h-8 w-16 text-white"><a href="signin.html">Sign in</a></button>
+            <button class="bg-gradient-to-r from-gray-900 to-gray-600 text-white font-sans rounded-lg px-2 py-1 w-20 h-7 relative top-[15px] hover:bg-custom-200 right-12 text-xs desktop:w-28 desktop:h-9 desktop:text-base desktop:relative top-2 mobile:w-20 h-8 mobile:top-1 tablet:top-1"><a href="signin.html">Get started</a></button>
+            <div id="menuButton" class="relative right-6 top-1 text-3xl desktop:hidden mobile:relative top-1 cursor-pointer">  &#8801;</div>
+        </div>
+    </nav>
+      
+    
+        <ul id="navList" class="flex flex-col items-center gap-2 p-2 absolute top-16 right-0 bg-gray-700 bg-opacity-20 border border-opacity-50 border-gray-300 rounded-xl  shadow-md  backdrop-blur-xl bg-blur large:hidden hidden z-50 font-serif">
+            <!-- Existing navigation items -->
+            <li class="hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center">
+                <a href="#features">Features</a>
+            </li>
+            <li class="hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center">
+                <a href="#testimonials">Testimonials</a>
+            </li>
+            <li class="hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center">
+                <a href="#pricing">Pricing</a>
+            </li>
+            <li class="hover:bg-zinc-400/25 rounded-lg px-2 py-1 text-center">
+                <a href="signin.html">Sign in</a>
+            </li>
+        </ul>
+    
+        
+        <main class="mx-auto">
+            <div class="text-center mx-auto max-w-screen-md ">
+                <h1 class="text-5xl font-semibold font-inter relative top-36 px-1 mobile:text-2xl mobile:font-bold animate-fadeInDown ">
+                    Accounting <span class="">made simple</span><br> for small businesses.
+                </h1>
+                <h2 class="mt-4 text-gray-500 relative top-40 mobile:text-xs px-2 text-center">
+                    Most bookkeeping softwares are accurate, but hard to use. We make <br> the
+                     opposite trade-off, and hope
+                    you don’t get audited.
+                </h2>
+            </div>
+            <div class="flex justify-center items-center mt-8 relative top-44">
+                <button class="bg-gradient-to-r from-gray-900 to-gray-600 text-white rounded-full px-3 py-2 hover:bg-slate-800 hover:drop-shadow-lg mr-4 ">
+                    Get 6 months free</button>
+                <button
+                    class="bg-gradient-to-tr from-purple-900 to-indigo-500 text-white rounded-full py-2 px-4 flex items-center hover:bg-blue-500 hover:drop-shadow-lg">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 3l14 9-14 9V3z"></path>
+                    </svg>
+                    Watch video
+                </button>
+            </div>
+            <div class="flex justify-center">
+                <span
+                    class="text-gray-600 font-bold text-center mt-8 md:mt-20 mx-4 md:mx-0 relative top-60 rounded-full border p-2 px-4">Trusted
+                    by these six companies so far</span>
+            </div>
+            <div class="flex flex-wrap justify-evenly items-center mt-4 md:mt-8 relative top-[270px]">
+                <img src="images/transistor.7274e6c3.svg" alt="" class="mb-4 mobile:relative mobile:right-3">
+                <img src="images/tuple.74eb0ae0.svg" alt="" class="mb-4 mobile:relative mobile:right-6">
+                <img src="images/statickit.d7937794.svg" alt="" class="mb-4 mr-1">
+                <img src="images/mirage.18d2ec4e.svg" alt="" class="mb-4">
+                <img src="images/laravel.7deed17e.svg" alt="" class="mb-4">
+                <img src="images/statamic.6da5ebfb.svg" alt="" class="mb-4 mobile:relative mobile:left-2">
+            </div>
+            <div id="features" class="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] bg-fixed bg-cover from-amber-200 via-violet-600 to-sky-900 h-[1000px] relative top-96">
+                <span class="text-white p-4 desktop:text-5xl font-inter text-3xl relative bottom-24 mobile:text-xl mobile:font-semibold tablet:text-4xl tablet:absolute tablet:top-9 ">Everything you need to run your books.</span>
+                <span class="text-white p-4 desktop:text-lg relative bottom-24  mobile:text-sm mobile:text-center tablet:text-md tablet:top-24 tablet:absolute mobile:mt-4">Well everything you need if you aren’t that picky about minor details like tax compliance.</span> 
+                
+                <div class="grid grid-cols-1 gap-y-5 relative bottom-2 right-72 text-white cursor-pointer mobile:hidden ipadpro:w-96 tablet:text-xs tablet:hidden ">
+                    <div class="button-div hover:bg-gray-400 active:bg-gray-200/25 hover:border hover:bg-opacity-30 border-opacity-30 p-5 rounded-lg hover:shadow-2xl maximize-animation" data-image="images/payroll2.webp">
+                        <span class="font-inter font-semibold ">Payroll</span>
+                        <p class="mt-4 ">Keep track of everyone's salaries and whether or not they've been paid. <br> Direct deposit not supported.</p>
+                    </div>
+                    
+                    <div class="button-div hover:bg-gray-400 hover:border active:bg-gray-200/25  hover:bg-opacity-30 border-opacity-30 p-5 rounded-lg hover:shadow-2xl maximize-animation" data-image="images/expenses.webp">
+                        <span class="font-inter font-semibold">Claim expenses</span>
+                        <p class="mt-4">All of your receipts organized into one place, as long as you don't mind <br> typing in the data by hand.</p>
+                    </div>
+                    
+                    <div class="button-div hover:bg-gray-400 hover:border active:bg-gray-200/25  hover:bg-opacity-30 border-opacity-30 p-5 rounded-lg hover:shadow-2xl maximize-animation" data-image="images/vat-returns.webp">
+                        <span class="font-inter font-semibold">VAT handling</span>
+                        <p class="mt-4">We only sell our software to companies who don't deal with VAT at all, <br> so technically we do all the VAT stuff they need.</p>
+                    </div>
+                    
+                    <div class="button-div hover:bg-gray-400 hover:border active:bg-gray-200/25  hover:bg-opacity-30 border-opacity-30 p-5 rounded-lg hover:shadow-2xl maximize-animation" data-image="images/reporting.webp">
+                        <span class="font-inter font-semibold">Reporting</span>
+                        <p class="mt-4">Easily export your data into an Excel spreadsheet where you can do <br> whatever the hell you want with it.</p>
+                    </div>
+                </div>
+            
+                <div class="flex items-center justify-end absolute top-[54%] right-0 transform -translate-y-1/2 mobile:hidden tablet:hidden">
+                    <img id="displayedImage" src="images/reporting.webp" class="w-[550px] rounded-tl-xl rounded-bl-xl" alt="">
+                </div>
+            
+                <!-- For mobile phones -->
+<!-- Buttons -->
+<div class="desktop:hidden flex gap-x-5 bg-white/50 px-1 py-2 text-sm text-center relative bottom-40 tablet:bottom-[750px] tablet:absolute tablet:w-full tablet:justify-between tabletmini:absolute ">
+    <div id="payrollBtn" onclick="showContent('payroll')" class="button px-1 py-1 rounded-lg cursor-pointer">Payroll</div>
+    <div id="expensesBtn" onclick="showContent('expenses')" class="button px-1 py-1 rounded-lg cursor-pointer">Claim expenses</div>
+    <div id="vatBtn" onclick="showContent('vat')" class="button px-1 py-1 rounded-lg cursor-pointer">VAT handling</div>
+    <div id="reportingBtn" onclick="showContent('reporting')" class="button px-1 py-1 rounded-lg cursor-pointer">Reporting</div>
+</div>
+
+<!-- Description -->
+<div id="payrollDesc" class="relative text-center text-white text-base font-noto-sans-sc hidden bottom-12 desktop:hidden ">
+    <div class="desktop:hidden">Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.</div>
+</div>
+<div id="expensesDesc" class="relative text-center text-white text-base font-noto-sans-sc hidden bottom-12 mx-2">
+    <div class="desktop:hidden">All of your receipts organized into one place, as long as you don't mind typing in the data by hand.</div>
+</div>
+<div id="vatDesc" class="relative text-center text-white text-base font-noto-sans-sc hidden bottom-12 mx-2">
+    <div class="desktop:hidden">We do all the VAT stuff for the companies who don't deal with VAT at all.</div>
+</div>
+<div id="reportingDesc" class="relative text-center text-white text-base font-noto-sans-sc bottom-12">
+    <div class="desktop:hidden">Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</div>
+</div>
+
+<!-- Images -->
+<div id="payrollImage" class="hidden relative shadow-2xl">
+    <img src="images/payroll.svg" class="w-[350px] rounded-lg" alt="">
+</div>
+<div id="expensesImage" class="hidden relative shadow-2xl">
+    <img src="images/expenses.webp" class="w-[350px] rounded-lg" alt="">
+</div>
+<div id="vatImage" class="hidden relative shadow-2xl">
+    <img src="images/vat-returns.webp" class="w-[350px] rounded-lg" alt="">
+</div>
+<div id="reportingImage" class="relative shadow-2xl desktop:hidden">
+    <img src="images/reporting.webp" class="w-[350px] rounded-lg " alt="">
+</div>
+<script>
+    // Variable to store the currently active button
+    let activeButton = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set initial active button and default content
+        setActiveButton('reportingBtn');
+        showContent('reporting');
+    });
+
+    function showContent(contentType) {
+        // Check if the same button is clicked again
+        if (activeButton === contentType + 'Btn') {
+            return;
+        }
+
+        // Hide all descriptions and images
+        hideAllContent();
+
+        // Show the selected description and image
+        document.getElementById(contentType + 'Desc').classList.remove('hidden');
+        document.getElementById(contentType + 'Image').classList.remove('hidden');
+
+        // Set the active button
+        setActiveButton(contentType + 'Btn');
+    }
+
+    function hideAllContent() {
+        // Hide all descriptions
+        document.getElementById('payrollDesc').classList.add('hidden');
+        document.getElementById('expensesDesc').classList.add('hidden');
+        document.getElementById('vatDesc').classList.add('hidden');
+        document.getElementById('reportingDesc').classList.add('hidden');
+
+        // Hide all images
+        document.getElementById('payrollImage').classList.add('hidden');
+        document.getElementById('expensesImage').classList.add('hidden');
+        document.getElementById('vatImage').classList.add('hidden');
+        document.getElementById('reportingImage').classList.add('hidden');
+    }
+
+    function setActiveButton(buttonId) {
+        // Remove active class from all buttons
+        document.querySelectorAll('.button').forEach(function(button) {
+            button.classList.remove('active', 'bg-white/30', 'shadow-xl', 'border');
+        });
+
+        // Add active class to the selected button
+        document.getElementById(buttonId).classList.add('active', 'bg-white/30', 'shadow-xl', 'border');
+
+        // Update the active button variable
+        activeButton = buttonId;
+    }
+</script>
+                
+
+
+            </div>
+
+
+            
+
+           
+        
+
+
+
+
+
+
+
+
+
+
+            <div id="testimonials"class="flex flex-col items-center justify-around bg-fixed bg-cover bg-gradient-to-r from-rose-100 to-teal-100  h-[1000px] tablet:h-auto mobile:h-auto relative top-96">
+                <p class="text-4xl font-semibold relative top-11 mobile:text-center mobile:text-xl mobile:top-4 tablet:top-4 tablet:text:xl tablet:text-center tablet:pt-7">Loved by businesses worldwide.</p>
+                <p class="text-center text-gray-600 mobile:items-center mobile:text-sm mobile:relative mobile:top-6 mobile:px-14 tablet:top-6 tablet:px-2 tablet:relative tablet:pt-6 tablet:pb-7 ">Our software is so simple that people can’t help but fall in love with it. Simplicity <br> is easy when you just skip tons of mission-critical features.</p>
+                <div class="grid grid-cols-3 gap-12 m-10 row tablet:grid-cols-2 mobile:grid-cols-1">
+                    <!-- Card 1 -->
+                    <div class="bg-white/50 order-2 rounded-xl  bg-opacity-50 shadow-xl maximize-animation flex flex-col desktop:h-60">
+                        <div class="px-5 py-11 text-left">
+                            TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-5">
+                            <ul class="py-2 px-0">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Sheryl Berge</li>
+                                <li class="text-gray-500 font-Noto Sans SC">CEO at Lynch LLC</li>
+                            </ul>
+                            <img src="images/avatar-1.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+            
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white/50 rounded-xl order-2 bg-opacity-50 shadow-xl maximize-animation flex flex-col">
+                        <div class="px-5 py-11 text-left">
+                            The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-2">
+                            <ul class="py-2 px-2">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Leland Kiehn</li>
+                                <li class="text-gray-500 font-Noto Sans SC">Founder of Kiehn and Sons</li>
+                            </ul>
+                            <img src="images/avatar-2.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+                    
+
+            
+                    <!-- Card 3 -->
+                    <div class="bg-white/50 rounded-xl order-2 bg-opacity-50 shadow-xl maximize-animation flex flex-col desktop:h-[270px]">
+                        <div class="px-5 py-11 text-left">
+                            I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore. Nervous to travel there now though.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-2">
+                            <ul class="py-3 px-2">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Peter Renolds</li>
+                                <li class="text-gray-500 font-Noto Sans SC">Founder of West Inc</li>
+                            </ul>
+                            <img src="images/avatar-3.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+            
+                    <!-- Card 4 -->
+                    <div class="bg-white/50 rounded-xl order-2 bg-opacity-50 shadow-xl maximize-animation flex flex-col desktop:h-[270px]">
+                        <div class="px-5 py-11 text-left">
+                            There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-2">
+                            <ul class="py-3 px-2">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Amy Hahn</li>
+                                <li class="text-gray-500 font-Noto Sans SC">Director at Velocity Industries</li>
+                            </ul>
+                            <img src="images/avatar-4.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+            
+                    <!-- Card 5 -->
+                    <div class="bg-white/50 rounded-xl order-2 bg-opacity-50 shadow-xl maximize-animation flex flex-col desktop:h-[270px]">
+                        <div class="px-5 py-11 text-left">
+                            I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore. Nervous to travel there now though.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-2">
+                            <ul class="py-3 px-2">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Erin Powlowski</li>
+                                <li class="text-gray-500 font-Noto Sans SC">COO at Armstrong Inc</li>
+                            </ul>
+                            <img src="images/avatar-5.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+            
+                    <!-- Card 6 -->
+                    <div class="bg-white/50 rounded-xl bg-opacity-50 shadow-xl maximize-animation flex flex-col desktop:h-[270px]">
+                        <div class="px-5 py-11 text-left">
+                            This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.
+                        </div>
+                        <div class="flex items-center justify-between border-t p-1 px-2">
+                            <ul class="py-3 px-2">
+                                <li class="mb-1 font-Noto Sans SC font-semibold">Amy Hahn</li>
+                                <li class="text-gray-500 font-Noto Sans SC">Director at Velocity Industries</li>
+                            </ul>
+                            <img src="images/avatar-6.webp" class="rounded-full w-11 h-11" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- javascript -->
+            <script>
+                const buttonDivs = document.querySelectorAll('.button-div');
+            
+                buttonDivs.forEach((buttonDiv) => {
+                    buttonDiv.addEventListener('click', () => {
+                        const imagePath = buttonDiv.dataset.image;
+                        document.getElementById('displayedImage').src = imagePath;
+                    });
+                });
+            </script>
+            
+            
+            <div id="pricing" class="text-white text-center relative top-[384px] h-24 text-4xl bg-custom-400 pt-10 tablet:text-2xl mobile:text-2xl font-inter">
+                Simple pricing, for everyone.
+            </div>
+            <div class="text-white text-center relative top-[380px] h-28 text-md font-sans   bg-custom-400 pt-0 tablet:text-base mobile:text-xs px-2 mobile:text-center text-gray-400 mobile:px-11" >
+                It doesn’t matter what size your business is, our software will work well for you.
+            </div>
+            <div class="grid grid-cols-3 gap-10 justify-items-center relative top-80 mobile:grid-cols-1 tablet:grid-cols-2 tabletmini:grid-cols-1 bg-custom-400 pt-10 pb-20 h-auto">
+
+                <!-- card 1 -->
+
+                <div class="bg-gray-700 bg-opacity-20 border border-opacity-30 border-gray-300 h-96 w-72 shadow-2xl rounded-xl text-white maximize-animation hover:bg-opacity-25">
+                    <div class="flex items-center justify-start mt-4 ml-4 font-bold text-4xl font-inter">
+                        $9
+                    </div>
+                    <div class="flex items-center justify-start mt-4 ml-4 font-semibold text-lg">
+                        Starter
+                    </div>
+                    <div class="flex items-center justify-start mt-4 ml-4 mr-4 text-sm text-gray-200">
+                        Good for anyone who is self-employed and just getting started.
+                    </div>
+                    <div class="inline-flex relative left-[90px] mt-4 mb-4 text-md font-Noto Sans SC border border-gray-500 rounded-full px-3 py-1 hover:border-gray-100 cursor-pointer transition-all duration-300">
+                        <a href="signin.html">Get Started</a>
+                    </div>                    
+                    <div class="ml-3 mb-2 text-sm font-Noto Sans SC flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Send 10 quotes and invoices
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Connect up to 2 bank accounts
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Track up to 15 expenses per month
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Manual payroll support
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Export up to 3 reports
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+
+                <div class="bg-gray-700 bg-opacity-20 border border-opacity-30 border-gray-300 h-96 w-72 shadow-2xl rounded-xl text-white maximize-animation hover:bg-opacity-25">
+                    <div class="flex items-center mt-4 ml-4 font-bold text-4xl font-inter">$15</div>
+                    <div class="flex items-center justify-start mt-4 ml-4 font-semibold text-lg">Small business</div>
+                    <div class="flex items-center justify-start mt-4 ml-4 mr-4 text-sm text-gray-200">Perfect for small/medium-sized businesses.</div>
+                    <div class="inline-flex relative left-[90px] mt-4 mb-4 text-md font-Noto Sans SC border border-gray-500 rounded-full px-3 py-1 hover:border-gray-100 cursor-pointer transition-all duration-300">
+                        <a href="signin.html">Get Started</a>
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Send 25 quotes and invoices
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Connect up to 5 bank accounts
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Track up to 50 expenses per month
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Automated payroll support
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Export up to 12 reports
+                    </div>
+                </div>
+                
+                <!-- card 3 -->
+
+                <div class="bg-gray-700 bg-opacity-20 border border-opacity-30 border-gray-300 h-96 w-72 shadow-2xl rounded-xl text-white maximize-animation hover:bg-opacity-25">
+                    <div class="flex items-center mt-4 ml-4 font-bold text-4xl font-inter">$39</div>
+                    <div class="flex items-center justify-start mt-4 ml-4 font-semibold text-lg">Enterprise</div>
+                    <div class="flex items-center justify-start mt-4 ml-4 mr-4 text-sm text-gray-200">For even the biggest enterprise companies.</div>
+                    <div class="inline-flex relative left-[90px] mt-4 mb-4 text-md font-Noto Sans SC border border-gray-500 rounded-full px-3 py-1 hover:border-gray-100 cursor-pointer transition-all duration-300">
+                        <a href="signin.html">Get Started</a>
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Send unlimited quotes and invoices
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Connect up to 15 bank accounts
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Track up to 200 expenses per month
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Automated payroll support
+                    </div>
+                    <div class="ml-3 mb-2 text-sm flex items-center">
+                        <img src="images/tick.svg" alt="" class="w-4 h-4 mr-2"> Export up to 25 reports, including TPS
+                    </div>
+                </div>
+                
+            </div>
+            <div class="bg-gradient-to-r  from-rose-100 to-teal-100 min-h-[1000px] max-h-[3000px]  relative top-80 ">
+                <div class="flex  flex-col gap-4 relative top-20 ml-10">
+                    <div class="text-4xl font-lexend mobile:text-2xl">Frequently asked questions</div>
+                    <div class="text-gray-700 mobile:mr-5 ">If you can’t find what you’re looking for, email our support team and if you’re <br> lucky someone will get back to you.</div>
+                </div>
+                <div class="grid grid-cols-3 relative top-40 mx-10 gap-y-5 gap-x-20 mobile:grid-cols-1 tablet:grid-cols-2">
+                    <!-- 1st row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold mb-4">Does TaxPal handle VAT?</div>
+                        <div class="text-gray-700">Well no, but if you move your company offshore you can  probably ignore it.</div>
+                    </div>
+                    
+                    <!-- 2nd row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">What was that testimonial about tax fraud all about?</div>
+                        <div class="text-gray-700">TaxPal is just a software application, ultimately your books are your responsibility.</div>
+                    </div>
+                
+                    <!-- 3rd row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">How do you generate reports?</div>
+                        <div class="text-gray-700">You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.</div>
+                    </div>
+                    <!-- 4th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">Can I pay for my subscription via purchase order?</div>
+                        <div class="text-gray-700">Absolutely, we are happy to take your money in all forms.</div>
+                    </div>
+                    
+                    <!-- 5th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">TaxPal sounds horrible but why do I still feel compelled to purchase?</div>
+                        <div class="text-gray-700">This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.</div>
+                    </div>
+                
+                    <!-- 6th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">Can we expect more inventory features?</div>
+                        <div class="text-gray-700">In life it’s really better to never expect anything at all.</div>
+                    </div>
+                    <!-- 7th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">How do I apply for a job at TaxPal?</div>
+                        <div class="text-gray-700">WWe only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.</div>
+                    </div>
+                    
+                    <!-- 8th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">I found other companies called TaxPal, are you sure you can use this name?</div>
+                        <div class="text-gray-700">Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.</div>
+                    </div>
+                
+                    <!-- 9th row -->
+                    <div class="mb-5">
+                        <div class="font-lexend font-semibold  mb-4">I lost my password, how do I get into my account?</div>
+                        <div class="text-gray-700">Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.</div>
+                    </div>
+                </div>
+                <div class="flex justify-between pl-10 pr-5 relative top-[340px] border-t border-gray-300 py-5 max-w-full mobile:pl-2 mobile:text-sm mobile:flex mobile:flex-col-reverse mobile:text-center tabletmini:text-center tabletmini:flex tabletmini:flex-col-reverse">
+                    <p>Copyright © 2023 TaxPal. All rights reserved.</p>
+                    <div class="flex gap-5 mobile:justify-center mobile:mb-3 tabletmini:justify-center tabletmini:mb-3">
+                        <img src="images/x-twitter.svg" class="w-5" alt="">
+                        <img src="images/instagram.svg" class="w-5" alt="">
+                        <img src="images/github.svg" class="w-5" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            
+            
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const menuButton = document.getElementById('menuButton');
+              const navList = document.getElementById('navList');
+          
+              // Initial position
+              const initialTopOffset = 50; // Adjust the initial offset as needed
+              navList.style.top = initialTopOffset + 'px';
+          
+              menuButton.addEventListener('click', function (event) {
+                event.stopPropagation(); // Prevent the click event from reaching the document
+                navList.classList.toggle('hidden');
+              });
+          
+              // Add a scroll event listener
+              window.addEventListener('scroll', function () {
+                const topOffset = window.scrollY + initialTopOffset; // Adjust the offset as needed
+                navList.style.top = topOffset + 'px';
+              });
+          
+              // Close the menu when clicking anywhere else on the document
+              document.addEventListener('click', function (event) {
+                const isClickInsideMenu = navList.contains(event.target);
+                if (!isClickInsideMenu) {
+                  navList.classList.add('hidden');
+                }
+              });
+            });
+          </script>
+          <div>
+            <p></p>
+          </div>
+          
+          
+</body>
+
+</html>
+
+
